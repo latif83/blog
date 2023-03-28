@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niilano Insights & Ideas | Sharing knowledge, one story at a time</title>
+    <link rel="icon" type="image/png" href="https://latif11.000webhostapp.com/wp-content/uploads/2023/03/kjf.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/6d6599af14.js" crossorigin="anonymous"></script>
+
+    <meta name='robots' content='max-image-preview:large' />
+
+    <meta name="description"
+        content="Discover insights and ideas on a variety of topics at Niilano, a blog that shares knowledge one story at a time. From technology to travel, we bring you stories that inform, inspire, and entertain.">
+    <meta name="keywords" content="insights, ideas, blog, knowledge, technology, travel, stories">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Niilano Insights and Ideas - Sharing Knowledge, One Story at a Time">
+    <meta property="og:description"
+        content="Discover insights and ideas on a variety of topics at Niilano, a blog that shares knowledge one story at a time. From technology to travel, we bring you stories that inform, inspire, and entertain.">
+    <meta property="og:image" content="https://latif11.000webhostapp.com/wp-content/uploads/2023/03/kjf.png">
+    <meta property="og:url" content="blog.niilano.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Niilano Insights and Ideas - Sharing Knowledge, One Story at a Time">
+    <meta name="twitter:description"
+        content="Discover insights and ideas on a variety of topics at Niilano, a blog that shares knowledge one story at a time. From technology to travel, we bring you stories that inform, inspire, and entertain.">
+    <meta name="twitter:image" content="https://latif11.000webhostapp.com/wp-content/uploads/2023/03/kjf.png">
+    <meta name="twitter:site" content="@niilano">
+    <meta name="twitter:creator" content="@niilano">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+
+        .head {
+            background-image: url(head-back.jpg);
+            background-size: cover;
+            position: relative;
+        }
+
+        .head::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            background-color: rgba(0, 0, 0, 0.445);
+            z-index: 0;
+        }
+
+        .head .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        marquee img {
+            height: 50px;
+            width: auto;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        @media(max-width:500px) {
+            .card-img-top {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--     background: #121026 -->
+
+    <div class="first-head py-2" style="background: #121026">
+
+        <div class="container">
+            <p id="clock" class="p-2 m-0 text-light" style="background : #c70909; width: max-content;"> </p>
+
+            <script>
+                function updateTime() {
+                    var now = new Date();
+                    var hours = now.getHours();
+                    var minutes = now.getMinutes();
+                    var seconds = now.getSeconds();
+                    var ampm = hours < 12 ? 'AM' : 'PM';
+                    hours = hours % 12;
+                    hours = hours ? hours : 12; // Convert 0 to 12
+                    var timeString = hours + ':' + padZero(minutes) + ':' + padZero(seconds) + ' ' + ampm;
+                    var dateString = now.toDateString();
+                    document.getElementById('clock').innerHTML = '<i class="fa fa-calendar me-2"></i>' + dateString + ' ' + timeString;
+                }
+
+                function padZero(number) {
+                    return (number < 10 ? '0' : '') + number;
+                }
+
+                updateTime();
+                setInterval(updateTime, 1000);
+            </script>
+
+        </div>
+
+    </div>
+
+    <div class="head py-5">
+
+        <div class="container">
+            <span class="navbar-brand"><img width="100" height="100"
+                    src="https://latif11.000webhostapp.com/wp-content/uploads/2023/03/kjf.png" class="custom-logo"
+                    alt="" decoding="async"></span>
+            <div class="site-branding-text">
+                <h1 class="site-title"><a class="text-light fw-bolder text-decoration-none"
+                        href="https://latif11.000webhostapp.com/" rel="home">Niilano Insights &amp;
+                        Ideas</a></h1>
+                <p class="site-description text-light">Sharing knowledge, one story at a time</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="py-3 text-light" style="background-color: #8e0701;">
+        <div class="container">
+            <h3 class="fw-bold"><i class="fa-solid fa-spinner fa-spin-pulse"></i> Recent Posts</h3>
+            <marquee direction="left">
+                <div id="recent" class="d-flex justify-content-between">
+                </div>
+            </marquee>
+        </div>
+    </div>
+
+    <!-- Stay tuned for interesting and informative content that covers a wide range of subjects. -->
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary d-none" id="blogModalOpen" data-bs-toggle="modal"
+        data-bs-target="#blogModal">
+        Read Blog
+    </button>
+
+    <!-- Modal -->
+    <div id="readblog"></div>
+
+
+    <!-- add an empty container to the HTML where the blog posts will be inserted -->
+    <div class="container my-5" id="blog-posts"></div>
+    <script src="posts.js"></script>
+    <script>
+
+
+        // function to create the HTML for a single blog post
+        function createBlogPostHTML(post) {
+            return `
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="${post.imageSrc}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title line-clamp-2">${post.title}</h5>
+            <p class="w-100 card-text line-clamp-2">${post.content}</p>
+            <a href="${window.location.pathname}?blog=${post.title}" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    `;
+        }
+
+        function readBlog(title) {
+
+            blogPosts.forEach((post) => {
+                if (post.title == title) {
+                    let readBlog = document.getElementById('readblog')
+                    let blogModalOpen = document.getElementById('blogModalOpen')
+
+                    readBlog.innerHTML = ` <div class="modal fade" id="blogModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">${post.title}</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-12 col-md-4">
+  <img src="${post.imageSrc}" alt="Blog Post Image" class="img-fluid">
+</div>
+<div class="col-12 col-md-8">
+  <p class="text-muted mb-0">Published on ${post.date} in ${post.category}</p>
+  <h5 class="mt-2">${post.title}</h5>
+  <p>${post.content}</p>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>`
+                    blogModalOpen.click()
+                    return
+                }
+                return
+            })
+
+        }
+
+        // function to create the HTML for a single blog post
+        function createRecentPostHTML(post) {
+            return `
+      <p class="me-4" onclick="readBlog('${post.title}')">  <a class="text-light text-decoration-none" href="#"> <img src="${post.imageSrc}" alt="${post.title}" /> ${post.title} </a> </p>
+    `;
+        }
+
+        // function to populate the blog posts container with the HTML for each blog post
+        function renderBlogPosts() {
+            const blogPostsContainer = document.getElementById('blog-posts');
+            const recentPosts = document.getElementById('recent');
+            let blogPostsHTML = '';
+            let recentBlogPostsHTML = '';
+            blogPosts.forEach(post => {
+                blogPostsHTML += createBlogPostHTML(post);
+                recentBlogPostsHTML += createRecentPostHTML(post)
+            });
+            blogPostsContainer.innerHTML = `
+      <h2>Featured Posts</h2>
+      <div class="row">
+        ${blogPostsHTML}
+      </div>
+    `;
+
+            recentPosts.innerHTML = recentBlogPostsHTML
+        }
+
+        // call the renderBlogPosts function to populate the container with the blog posts
+        renderBlogPosts();
+
+        const queryParams = new URLSearchParams(window.location.search);
+        const blogParam = queryParams.get('blog');
+
+        // console.log(blogParam);
+        if (blogParam) {
+
+            blogPosts.forEach((post) => {
+                if (post.title == blogParam) {
+
+                    document.title = post.title;
+                    document.querySelector('meta[name="description"]').setAttribute('content', post.content);
+                    document.querySelector('meta[property="og:title"]').setAttribute('content', post.title);
+                    document.querySelector('meta[property="og:description"]').setAttribute('content', post.content);
+                    document.querySelector('meta[name="twitter:title"]').setAttribute('content', post.title);
+                    document.querySelector('meta[name="twitter:description"]').setAttribute('content', post.content);
+                    document.querySelector('meta[property="og:image"]').setAttribute('content', post.imageSrc);
+document.querySelector('meta[name="twitter:image"]').setAttribute('content', post.imageSrc);
+
+                    readBlog(blogParam)
+                }
+            })
+
+        }
+
+    </script>
+
+    <footer>
+        <div class="py-5" style="background-color: #121026;">
+            <div class="container">
+                <span class="navbar-brand"><img width="100" height="100"
+                        src="https://latif11.000webhostapp.com/wp-content/uploads/2023/03/kjf.png" class="custom-logo"
+                        alt="" decoding="async"></span>
+                <p class="fs-3 m-0"> <a class="text-light text-decoration-none"
+                        href="https://latif11.000webhostapp.com/" rel="home">Niilano Insights &amp; Ideas</a></p>
+                <p class="text-light m-0">Sharing knowledge, one story at a time</p>
+            </div>
+        </div>
+        <div class="py-2" style="background-color: #090818; color: #aaaed1;">
+            <div class="container">
+                <p class="m-0">
+                    Proudly powered by niilano &copy; 2022
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
