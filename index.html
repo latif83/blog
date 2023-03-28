@@ -129,7 +129,7 @@
                     alt="" decoding="async"></span>
             <div class="site-branding-text">
                 <h1 class="site-title"><a class="text-light fw-bolder text-decoration-none"
-                        href="https://latif11.000webhostapp.com/" rel="home">Niilano Insights &amp;
+                        href="/" rel="home">Niilano Insights &amp;
                         Ideas</a></h1>
                 <p class="site-description text-light">Sharing knowledge, one story at a time</p>
             </div>
@@ -225,7 +225,7 @@
         // function to create the HTML for a single blog post
         function createRecentPostHTML(post) {
             return `
-      <p class="me-4" onclick="readBlog('${post.title}')">  <a class="text-light text-decoration-none" href="#"> <img src="${post.imageSrc}" alt="${post.title}" /> ${post.title} </a> </p>
+      <p class="me-4" onclick="readBlog('${post.title}')">  <a class="text-light text-decoration-none" href="${window.location.pathname}?blog=${post.title}"> <img src="${post.imageSrc}" alt="${post.title}" /> ${post.title} </a> </p>
     `;
         }
 
@@ -285,7 +285,7 @@ document.querySelector('meta[name="twitter:image"]').setAttribute('content', pos
                         src="https://latif11.000webhostapp.com/wp-content/uploads/2023/03/kjf.png" class="custom-logo"
                         alt="" decoding="async"></span>
                 <p class="fs-3 m-0"> <a class="text-light text-decoration-none"
-                        href="https://latif11.000webhostapp.com/" rel="home">Niilano Insights &amp; Ideas</a></p>
+                        href="/" rel="home">Niilano Insights &amp; Ideas</a></p>
                 <p class="text-light m-0">Sharing knowledge, one story at a time</p>
             </div>
         </div>
